@@ -1,0 +1,99 @@
+```
+#-*-coding:utf-8-*-#
+
+# 对象、类及从属关系 习题42 12.17
+## Animals is-a object (yes, sort of confusing) look at the extra credit
+# 定义大类animal
+class Animal(object):
+	pass
+	
+## is-a
+# 定义dog是动物的一类
+class Dog(Animal):
+
+	def __init__(self, name):
+		self.name = name
+
+# 定义cat是动物的一类		
+class Cat(Animal):
+
+	def __init__(self, name):
+		self.name = name
+		
+## is-a
+# 定义大类人类
+# 初步函数人类有名字和宠物
+class Person(object)
+
+	def __init__(self, name):
+		self.name = name
+		## Person has-a pet of some kind
+		self.pet = None
+		
+		
+## is-a
+# 定义职员是人类的一类
+# 初步函数定义支援有名字和薪水
+class Employee(Person):
+	
+	def __init__(self, name, salary):
+		## hmm what is this strange magic?
+		super(Employee, self).__init__(name)
+		## has-a
+		self.salary = salary
+		
+		
+## is-a
+# 定义大类鱼类
+class Fish(object):
+	pass
+	
+## is-a
+# 定义鲑鱼是鱼类的一类
+class Salmon(Fish):
+	pass
+	
+## is-a
+# 定义鳙鲽鱼是鱼类的一种
+class halibut(Fish):
+	pass
+	
+## rover is-a Dog
+# 定义rover是一只叫rover的狗类，也属于动物
+rover = Dog("Rover")
+
+## satan is-a cat
+# 定义satan是一只叫satan的猫类，也属于动物
+satan = Cat("Satan")
+
+## Mary is-a person
+# 定义mary是一只叫mary的人类
+mary = Person("Mary")
+
+## 
+# 定义mary的宠物是satan名字叫satan
+mary.pet = satan
+
+##
+# 定义frank是一个叫Frank，薪水120000的职员，同时也属于人类
+frank = Employee("Frank", 120000)
+
+##
+# frank的宠物叫rover
+frank.pet = rover
+
+##
+# flipper是鱼类的属性
+flipper = Fish()
+
+##
+## crouse是salmon的属性
+crouse = Salmon()
+
+##
+# harry是hailbut的属性
+harry = Halibut()
+
+
+
+```
